@@ -2,60 +2,77 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Pot Of Lotus</title>
-
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquetado Estructural - Wireframe</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-<div class="container mt-4">
-
-    <h1 class="mb-4">Shop</h1>
-
-    <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="#">MiSitio</a>
-
-        <!-- Botón hamburguesa -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Menú -->
-        <div class="collapse navbar-collapse" id="menu">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-    <!-- Formulario -->
-    <form class="mb-4">
-        <input class="form-control mb-2" placeholder="Nombre">
-        <button class="btn btn-primary">Enviar</button>
-    </form>
-
-    <!-- Tarjetas -->
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card"><div class="card-body">Card 1</div></div>
-        </div>
-        <div class="col-md-4">
-            <div class="card"><div class="card-body">Card 2</div></div>
-        </div>
-        <div class="col-md-4">
-            <div class="card"><div class="card-body">Card 3</div></div>
-        </div>
+    <div class="top-bar">
+        OFERTAS
     </div>
 
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <header class="header-principal">
+        <div class="contenedor-header">
+            <div class="area-logo">Logo</div>
+
+            <nav class="menu-principal">
+                <ul>
+                    <li><a href="catalogo" class="active">Catalogo Completo</a></li>
+                    <li><a href="magic" class="active">Magic</a></li>
+                    <li><a href="yugioh" class="active">YuGiOh</a></li>
+                    <li><a href="pokemon" class="active">Pokemon</a></li>
+                    <li><a href="otro" class="active">otro</a></li>
+                </ul>
+            </nav>
+
+            <div class="area-busqueda">
+                <input type="text" placeholder="Barra Buscadora">
+            </div>
+
+            <div class="area-carrito">
+            <li><a href="carrito" class="active">Carrito</a></li>
+            </div>
+            <li><a href="login" class="active">Iniciar Sesión</a></li>
+        </div>
+    </header>
+
+    <main>
+        <section class="seccion-hero">
+            <div class="hero-imagen-placeholder">
+                </div>
+            <article class="hero-contenido">
+                <h1>NOVEDADES</h1>
+                <p>At our shop, we believe in the power of herbs to heal and nourish the body. That's why we've carefully curated a selection of the finest herbal teas from around the world.</p>
+                <button class="boton-placeholder">Shop now</button>
+            </article>
+        </section>
+
+        <section class="seccion-grid-novedades">
+            <div class="contenedor-grid">
+                <article class="item-novedad">
+                    <div class="placeholder-img-cuadrada"></div>
+                    <p>Novedades</p>
+                </article>
+                <article class="item-novedad">
+                    <div class="placeholder-img-cuadrada"></div>
+                    <p>Novedades</p>
+                </article>
+                <article class="item-novedad">
+                    <div class="placeholder-img-cuadrada"></div>
+                    <p>Novedades</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="seccion-ofertas-descuentos">
+            <h2>OFERTAS O DESCUENTOS</h2>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <div class="ayuda-flotante">?</div>
+    </footer>
+
 </body>
 </html>
