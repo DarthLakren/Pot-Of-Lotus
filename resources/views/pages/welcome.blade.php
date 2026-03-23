@@ -1,19 +1,6 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maquetado Estructural - Wireframe</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+@extends('layouts.app')
 
-    <div class="top-bar">
-        OFERTAS
-    </div>
-
-    <x-header />
-
+@section('contenido')
     <main>
         <section class="seccion-hero">
             <div class="hero-imagen-placeholder">
@@ -46,10 +33,4 @@
             <h2>OFERTAS O DESCUENTOS</h2>
         </section>
     </main>
-
-    <footer class="pie-pagina">
-        <div class="ayuda-flotante">?</div>
-    </footer>
-
-</body>
-</html>
+@endsection
