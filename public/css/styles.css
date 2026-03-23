@@ -1,3 +1,57 @@
+/*CSS PARA EL MOCKUP XDXD*/
+
+
+/*HEADER*/
+
+/*FUENTES*/
+@font-face {
+  font-family: 'XD';
+  src: url('/fonts/Bangers-Regular.ttf') format('truetype');
+}
+
+.headerPoL {
+  background-color: #6644AE; /* COLOR OSCURO HEADER */
+  font-family: 'XD';
+}
+
+.navbar .nav-link {
+  position: relative;
+}
+
+/*LINEA AESTERICK*/
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #fff; 
+  transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/*BODY*/
+body {
+  padding-top: 75px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Reset básico para maquetado estructural */
 * {
     margin: 0;

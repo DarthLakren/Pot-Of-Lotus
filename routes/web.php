@@ -16,9 +16,9 @@ Route::get('/yugioh', function () {
     return view('yugioh'); // nombre de tu archivo yugioh.blade.php
 })->name('yugioh');
 
-Route::get('/pokemon', function () {
-    return view('pokemon'); // nombre de tu archivo pokemon.blade.php
-})->name('pokemon');
+Route::get('/mitos', function () {
+    return view('mitos'); // nombre de tu archivo pokemon.blade.php
+})->name('mitos');
 
 Route::get('/carta', function () {
     return view('carta'); // nombre de tu archivo carta.blade.php

@@ -12,30 +12,7 @@
         OFERTAS
     </div>
 
-    <header class="header-principal">
-        <div class="contenedor-header">
-            <div class="area-logo">Logo</div>
-
-            <nav class="menu-principal">
-                <ul>
-                    <li><a href="catalogo" class="active">Catalogo Completo</a></li>
-                    <li><a href="magic" class="active">Magic</a></li>
-                    <li><a href="yugioh" class="active">YuGiOh</a></li>
-                    <li><a href="pokemon" class="active">Pokemon</a></li>
-                    <li><a href="otro" class="active">otro</a></li>
-                </ul>
-            </nav>
-
-            <div class="area-busqueda">
-                <input type="text" placeholder="Barra Buscadora">
-            </div>
-
-            <div class="area-carrito">
-            <li><a href="carrito" class="active">Carrito</a></li>
-            </div>
-            <li><a href="login" class="active">Iniciar Sesión</a></li>
-        </div>
-    </header>
+    <x-header />
 
     <main>
         <section class="seccion-hero">
