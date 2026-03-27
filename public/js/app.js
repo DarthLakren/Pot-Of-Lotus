@@ -13,3 +13,25 @@ window.addEventListener("scroll", () => {
 
   lastScroll = currentScroll;
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const carrusel = document.getElementById("carrusel");
+    const btnNext = document.querySelector(".btn-next");
+    const btnPrev = document.querySelector(".btn-prev");
+
+    btnNext.addEventListener("click", () => {
+        carrusel.scrollBy({
+            left: 250,
+            behavior: 'smooth'
+        });
+    });
+
+    btnPrev.addEventListener("click", () => {
+        carrusel.scrollBy({
+            left: -250,
+            behavior: 'smooth'
+        });
+    });
+
+});

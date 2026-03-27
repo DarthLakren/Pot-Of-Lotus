@@ -16,22 +16,28 @@
         <section class="seccion-grid-novedades">
             <div class="contenedor-grid">
                 <article class="item-novedad">
-                    <div class="placeholder-img-cuadrada"></div>
+                    <div class="uplaceholder-img-cadrada">
+                        <img src="images/yugi_nov.webp" class="img-novedades" alt="Novedades">
+                    </div>
                     <p>Novedades</p>
                 </article>
                 <article class="item-novedad">
-                    <div class="placeholder-img-cuadrada"></div>
+                    <div class="placeholder-img-cuadrada">
+                         <img src="images/mtg_nov.webp" class="img-novedades" alt="Novedades">
+                    </div>
                     <p>Novedades</p>
                 </article>
                 <article class="item-novedad">
-                    <div class="placeholder-img-cuadrada"></div>
+                    <div class="placeholder-img-cuadrada">
+                         <img src="images/mitos_nov.webp" class="img-novedades" alt="Novedades">
+                    </div>
                     <p>Novedades</p>
                 </article>
             </div>
         </section>
 
-        <section class="seccion-ofertas-descuentos">
-            <h2>OFERTAS O DESCUENTOS</h2>
-        </section>
+        <x-Descuentos />
+        <x-Articulos />
     </main>
+    
 @endsection

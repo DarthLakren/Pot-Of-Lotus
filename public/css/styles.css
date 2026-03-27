@@ -12,6 +12,7 @@
 .headerPoL {
   background-color: #6644AE; /* COLOR OSCURO HEADER */
   font-family: 'XD';
+  z-index: 1000; 
 }
 
 .navbar .nav-link {
@@ -49,6 +50,7 @@ body {
   font-style: bold;
   background: #1A1A1A;
   text-align: center;
+  z-index: 1000; 
 }
 
 /* TU header */
@@ -72,6 +74,13 @@ body {
     height: auto;
     display: block;
     margin: auto;
+}
+
+/*NOVEDADES GRANDE*/
+
+.seccion-hero {
+    display: flex;
+    min-height: 400px;
 }
 
 .hero-contenido {
@@ -99,6 +108,410 @@ body {
     margin-top: 20px;
     cursor: pointer;
 }
+
+/*SECCION TCG*/
+
+.seccion-grid-novedades {
+    padding: 50px 20px;
+    background-color: #7F67B2;
+    color: white;
+    font-family: 'XD';
+    font-size: 2vw;
+}
+
+.contenedor-grid {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.item-novedad {
+    text-align: center;
+    flex: 1;
+}
+
+.placeholder-img-cuadrada {
+    background-color: #d1d1d1;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.img-novedades{
+    width: 25vw;
+    border: 0.5vw solid white;
+    border-radius: 0.5vw;       
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*COMPONENTE DESCUENTOS */
+.seccion-ofertas-descuentos {
+    padding: 20px;
+    background-color: #B694FF;
+    color: white;
+    font-family: 'XD';
+}
+
+.seccion-ofertas-descuentos h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Cartas en horizontal */
+.contenedor-cartas {
+    color: black;
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+    justify-content: center;
+}
+
+.card-carta {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    min-width: 220px;
+    background: white;
+    border: 0.5vw solid white; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.card-carta:hover {
+    transform: translateY(-5px);
+}
+
+.img-container {
+    position: relative;
+}
+
+.img-container img {
+    width: 100%;
+    height: 22vw;
+    object-fit: cover;
+}
+
+/* Precio */
+.precio {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    background: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Info */
+.info {
+    padding: 15px;
+    text-align: center;
+}
+
+.info h3 {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*COMPONENTE ARTICULOS*/
+
+.seccion-ofertas-descuentos2 {
+    padding: 20px;
+    background-color: white;
+    color: black;
+    font-family: 'XD';
+}
+
+.seccion-ofertas-descuentos2 h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Cartas en horizontal */
+.contenedor-cartas2 {
+    color: black;
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+    justify-content: center;
+}
+
+.card-carta2 {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    min-width: 220px;
+    background: white;
+    border: 0.5vw solid white; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.card-carta2:hover {
+    transform: translateY(-5px);
+}
+
+.img-container2 {
+    position: relative;
+}
+
+.img-container2 img {
+    width: 100%;
+    height: 22vw;
+    object-fit: cover;
+}
+
+/* Precio */
+.precio {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    background: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Info */
+.info {
+    padding: 15px;
+    text-align: center;
+}
+
+.info h3 {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*COMPONENTE CARTON DESTACADO*/
+.contenedor-carrusel {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.btn-prev, .btn-next {
+    background: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.contenedor-CD::-webkit-scrollbar {
+    display: none;
+}
+
+.seccion-CD {
+    padding: 20px;
+    background-color: #B694FF;
+    color: white;
+    font-family: 'XD';
+}
+
+.seccion-CD h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Cartas en horizontal */
+.contenedor-CD {
+    color: black;
+    display: flex;
+    gap: 1vw;
+    padding: 0 20px;
+    justify-content: center;
+    overflow-x: auto;
+}
+
+.card-carta {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    min-width: 220px;
+    background: white;
+    border: 0.5vw solid white; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.card-carta:hover {
+    transform: translateY(-5px);
+}
+
+.img-container {
+    position: relative;
+}
+
+.img-container img {
+    width: 100%;
+    height: 22vw;
+    object-fit: cover;
+}
+
+/* Precio */
+.precio {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    background: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+
+}
+
+/* Info */
+.info {
+    padding: 15px;
+    text-align: center;
+}
+
+.info h3 {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+
+
+
+
+
+
+/*FOOTER*/
+
+.footer-dark {
+    background-color: black;
+    color: white;
+    padding: 50px 20px;
+    margin-top: 50px;
+}
+
+/* TOP */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* responsive */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* IZQUIERDA */
+.footer-info-left {
+    flex: 1;
+}
+
+/* LOGO */
+.footer-logo-box img {
+    width: 80px;
+    height: auto;
+}
+.footer-logo-texto {
+    display: flex;
+    align-items: center; 
+    gap: 15px;           
+}
+
+/* ICONOS */
+.social-icons span {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* DERECHA */
+.footer-form-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.footer-form-right input {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+}
+
+/* BOTÓN */
+.btn-suscribir {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* BOTTOM */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 30px auto 0;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col li {
+    margin: 5px 0;
+}
+
 
 
 
@@ -212,61 +625,9 @@ body {
     padding: 5px 10px;
 }
 
-/* Sección Hero */
-
-.seccion-hero {
-    display: flex;
-    min-height: 400px;
-}
 
 
 
-
-
-
-
-
-
-/* Sección Grid */
-
-.seccion-grid-novedades {
-    padding: 50px 20px;
-}
-
-.contenedor-grid {
-    display: flex;
-    justify-content: space-around;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 20px;
-}
-
-.item-novedad {
-    text-align: center;
-    flex: 1;
-}
-
-.placeholder-img-cuadrada {
-    background-color: #d1d1d1;
-    aspect-ratio: 16 / 9;
-    margin-bottom: 10px;
-    border-radius: 4px;
-}
-
-/* Sección Inferior */
-
-.seccion-ofertas-descuentos {
-    background-color: #e0e0e0;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.seccion-ofertas-descuentos h2 {
-    font-size: 2.5rem;
-}
 
 /* Elementos adicionales */
 
@@ -367,22 +728,7 @@ body {
 
 .img-mini { background: #d1d1d1; height: 80px; margin-bottom: 5px; }
 
-/* Footer */
-.footer-completo {
-    background-color: #444;
-    color: white;
-    padding: 40px 20px;
-    margin-top: 40px;
-}
 
-.footer-top, .footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-links { display: flex; gap: 40px; }
 
 /* Estilos para la página de Detalle */
 .contenedor-detalle {
@@ -532,41 +878,7 @@ body {
     margin: 0 auto 20px auto;
 }
 
-/* Ajustes Footer Dark */
-.footer-dark {
-    background-color: #4a4a4a;
-    color: white;
-    padding: 50px 0 20px 0;
-    margin-top: 50px;
-}
 
-.footer-info-left { flex: 1; }
-.footer-form-right {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 10px;
-}
-
-.btn-suscribir {
-    background: transparent;
-    border: 1px solid white;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 20px;
-}
-
-.footer-logo-box {
-    width: 80px;
-    height: 60px;
-    background: white;
-    color: #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px 0;
-}
 /* Layout del Carrito */
 .contenedor-carrito {
     max-width: 1000px; /* Un poco más estrecho para centrar el flujo */
