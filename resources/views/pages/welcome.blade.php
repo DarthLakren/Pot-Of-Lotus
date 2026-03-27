@@ -4,11 +4,12 @@
     <main>
         <section class="seccion-hero">
             <div class="hero-imagen-placeholder">
-                </div>
+                <img src="images/NOVEDADES.webp" class="img_prin" alt="Novedades">
+                </div> 
             <article class="hero-contenido">
-                <h1>NOVEDADES</h1>
-                <p>At our shop, we believe in the power of herbs to heal and nourish the body. That's why we've carefully curated a selection of the finest herbal teas from around the world.</p>
-                <button class="boton-placeholder">Shop now</button>
+                <h1>Teenege Mutan Ninja Turtles!</h1>
+                <p>El mejor equipo de tortugas sale de los sumideros para dar el salto a Magic: The Gathering. Las tortugas ninja toman la forma de cartas de Magic y usan su conocida fuerza (¡y resistencia!) para proteger las calles de Shredder y los mutantes que desatan el caos.</p>
+                <button class="boton-placeholder">Compra YA</button>
             </article>
         </section>
 
