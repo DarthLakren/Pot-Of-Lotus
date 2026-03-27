@@ -40,6 +40,10 @@ Route::get('/pago', function () {
     return view('pages.pago');
 })->name('pago');
 
+Route::get('/buscar', function () {
+    return view('pages.buscar');
+})->name('buscar');
+
 Route::get('/login', function () {
     return view('pages.secion_login'); // Nombre exacto que pediste
 })->name('login');
