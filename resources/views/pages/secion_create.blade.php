@@ -1,66 +1,40 @@
-<!DOCTYPE html>
-<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear una cuenta</title>
-    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
 
-    <header class="header-principal">
-        <div class="contenedor-header">
-            <div class="area-logo">Logo</div>
-            <nav class="menu-principal">
-                <ul>
-                    <li><a href="{{ route('inicio') }}">TCG1</a></li>
-                    <li><a href="{{ route('catalogo') }}">TCG 2</a></li>
-                    <li>TCG3</li>
-                </ul>
-            </nav>
-            <div class="area-busqueda"><input type="text" placeholder="Barra Buscadora"></div>
-            <div class="area-cuenta">CUENTA</div>
-        </div>
-    </header>
 
-    <main class="contenedor-login">
-        <section class="columna-imagen-login">
-            <div class="overlay-texto">
-                <h1>IMAGEN DURISIMA</h1>
+
+<section class="auth-container">
+    
+    <div class="auth-left">
+        <img src="images/registro.jpg" alt="Registro">
+    </div>
+
+    
+    <div class="auth-right">
+
+        <h1>CREAR UNA CUENTA</h1>
+
+        <form>
+
+            <label>CORREO</label>
+            <input type="email" placeholder="Lorem ipsum">
+
+            <label>CONTRASEÑA</label>
+            <input type="password" placeholder="Lorem ipsum">
+
+            <button type="submit">Crear cuenta</button>
+
+            <div class="terminos">
+                <input type="checkbox">
+                <span>TERMINOS Y CONDICIONES</span>
             </div>
-        </section>
 
-        <section class="columna-form-login">
-            <div class="wrapper-form">
-                <h2>Crear una cuenta</h2>
+            <p class="login-link">YA TIENES CUENTA?</p>
 
-                <form action="#" method="POST">
-                    @csrf
-                    <div class="campo-login">
-                        <label>CORREO</label>
-                        <input type="email" placeholder="Lorem ipsum">
-                        <p class="helper-text">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-                    </div>
+        </form>
 
-                    <div class="campo-login">
-                        <label>CONTRASENA</label>
-                        <input type="password" placeholder="Lorem ipsum">
-                        <p class="helper-text">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-                    </div>
+    </div>
 
-                    <button type="submit" class="btn-iniciar">Crear cuenta</button>
-
-                    <div class="opciones-login">
-                        <label><input type="checkbox"> TERMINOS Y CONDICIONES</label>
-                        <a href="{{ route('login') }}" class="enlace-registro">YA TIENES CUENTA?</a>
-                    </div>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer-dark">
-        </footer>
-
-</body>
-</html>
+</section>

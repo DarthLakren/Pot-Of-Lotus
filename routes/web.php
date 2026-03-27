@@ -4,32 +4,32 @@ use Illuminate\Support\Facades\Route;
 
 // Ruta para la página de Inicio (Novedades)
 Route::get('/', function () {
-    return view('pages.welcome'); // nombre de tu archivo novedades.blade.php
+    return view('pages.welcome'); 
 })->name('inicio');
 
 // Ruta para la página de Catálogo
 Route::get('/magic', function () {
-    return view('pages.magic'); // nombre de tu archivo catalogo.blade.php
+    return view('pages.magic'); 
 })->name('magic');
 
 Route::get('/yugioh', function () {
-    return view('pages.yugioh'); // nombre de tu archivo yugioh.blade.php
+    return view('pages.yugioh'); 
 })->name('yugioh');
 
 Route::get('/mitos', function () {
-    return view('pages.mitos'); // nombre de tu archivo pokemon.blade.php
+    return view('pages.mitos'); 
 })->name('mitos');
 
 Route::get('/carta', function () {
-    return view('pages.carta'); // nombre de tu archivo carta.blade.php
+    return view('pages.carta'); 
 })->name('carta');
 
 Route::get('/catalogo', function () {
-    return view('pages.catalogo'); // nombre de tu archivo catalogo.blade.php
+    return view('pages.catalogo'); 
 })->name('catalogo');
 
 Route::get('/carrito', function () {
-    return view('pages.carrito'); // nombre de tu archivo carrito.blade.php
+    return view('pages.carrito'); 
 })->name('carrito');
 
 Route::get('/carrito', function () {

@@ -812,6 +812,99 @@ hr {
 
 
 
+/*SECCION CHECKOUT*/
+.checkout {
+    display: flex;
+    height: 100vh;
+}
+
+/* IZQUIERDA */
+.checkout-left {
+    width: 50%;
+    background: #7B6AA8;
+    padding: 40px;
+    color: white;
+}
+
+.checkout-left h2 {
+    margin: 20px 0;
+}
+
+/* ITEM */
+.item {
+    display: flex;
+    align-items: center;
+    background: #eee;
+    color: black;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.item img {
+    width: 80px;
+    margin-right: 15px;
+}
+
+.item .info {
+    flex: 1;
+}
+
+.item .precio {
+    font-weight: bold;
+}
+
+/* OPCIONES */
+.opcion {
+    background: #eee;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* DERECHA */
+.checkout-right {
+    width: 50%;
+    background: #f2f2f2;
+    padding: 40px;
+}
+
+.checkout-right h2 {
+    margin-bottom: 20px;
+}
+
+/* FORM */
+.form-envio {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-envio input {
+    border: none;
+    border-bottom: 2px solid #999;
+    background: transparent;
+    padding: 10px;
+}
+
+.form-envio input:focus {
+    outline: none;
+    border-color: #7B6AA8;
+}
+
+/* BOTÓN */
+.form-envio button {
+    margin-top: 20px;
+    padding: 12px;
+    background: #7B6AA8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
 
 
@@ -822,3 +915,87 @@ hr {
 
 
 
+
+
+
+
+
+
+
+/*SECCION REGISTRO*/
+.auth-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* IZQUIERDA */
+.auth-left {
+    width: 50%;
+}
+
+.auth-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* DERECHA */
+.auth-right {
+    width: 50%;
+    background: white;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'XD';
+}
+
+.auth-right h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    font-size: 12px;
+    color: #555;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+/* BOTÓN */
+button {
+    margin-top: 10px;
+    padding: 10px;
+    background: #7B6AA8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* TERMINOS */
+.terminos {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+}
+
+/* LINK */
+.login-link {
+    margin-top: 10px;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+}
