@@ -24,7 +24,7 @@
             <label>CONTRASEÑA</label>
             <input type="password" placeholder="Lorem ipsum">
 
-            <button type="button" onclick="window.location.href='/'">
+            <button type="button" onclick="window.location.href='/cuenta'">
                 Iniciar Sesion
             </button>
 
