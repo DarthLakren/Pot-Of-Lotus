@@ -45,9 +45,19 @@ Route::get('/buscar', function () {
 })->name('buscar');
 
 Route::get('/login', function () {
-    return view('pages.secion_login'); // Nombre exacto que pediste
+    return view('pages.secion_login');
 })->name('login');
 
 Route::get('/registro', function () {
-    return view('pages.secion_create'); // Nombre actualizado
+    return view('pages.secion_create');
 })->name('registro');
+
+Route::get('/cuenta', function () {
+    return view('pages.cuenta');
+})->name('cuenta');
+
+Route::get('/atencion', function () {
+    return view('pages.atencion');
+})->name('atencion');
+
+

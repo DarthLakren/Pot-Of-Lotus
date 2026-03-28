@@ -48,7 +48,7 @@
         </div>
 
         <!-- BOTÓN -->
-        <button class="btn-agregar">AGREGAR</button>
+        <button class="btn-agregar" onclick="window.location.href='/carrito'">AGREGAR</button>
 
     </div>
 

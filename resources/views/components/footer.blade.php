@@ -14,9 +14,14 @@
             </div>
 
             <div class="social-icons">
-                <span>f</span>
-                <span>i</span>
-            </div>
+    <a href="https://facebook.com" target="_blank">
+        <span>f</span>
+    </a>
+
+    <a href="https://instagram.com" target="_blank">
+        <span>i</span>
+    </a>
+</div>
 
         </div>
 
@@ -32,18 +37,20 @@
     <div class="footer-bottom">
 
         <div class="footer-col">
-            <strong>Help</strong>
-            <ul>
-                <li>FAQ</li>
-                <li>Customer service</li>
-            </ul>
-        </div>
+        <strong>Ayuda</strong>
+        <ul>
+            <li>FAQ</li>
+            <li>
+                <a href="/atencion">Atencion a clientes</a>
+            </li>
+        </ul>
+    </div>
 
         <div class="footer-col">
-            <strong>Other</strong>
+            <strong>Otros</strong>
             <ul>
-                <li>Privacy Policy</li>
-                <li>Sitemap</li>
+                <li>Politica de Privacidad</li>
+                <li>Mapa del sitio</li>
             </ul>
         </div>
 

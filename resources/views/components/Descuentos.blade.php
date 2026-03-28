@@ -6,7 +6,7 @@
         <!-- Cajoncillo 1-->
         <div class="card-carta">
             <div class="img-container">
-                <img src="images/DB/MTG/01.webp" alt="">
+                <img src="images/DB/MTG/01.webp" alt="" onclick="window.location.href='/carta'">
                 <div class="precio">$150</div>
             </div>
             <div class="info">
@@ -17,7 +17,7 @@
         <!-- Cajoncillo 2 -->
         <div class="card-carta">
             <div class="img-container">
-                <img src="images/DB/MTG/01.webp" alt="">
+                <img src="images/DB/MTG/01.webp" alt="" onclick="window.location.href='/carta'">
                 <div class="precio">$200</div>
             </div>
             <div class="info">
@@ -28,7 +28,7 @@
         <!-- Cajoncillo 3 -->
         <div class="card-carta">
             <div class="img-container">
-                <img src="images/DB/MTG/01.webp" alt="">
+                <img src="images/DB/MTG/01.webp" alt="" onclick="window.location.href='/carta'">
                 <div class="precio">$120</div>
             </div>
             <div class="info">

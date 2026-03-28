@@ -51,8 +51,8 @@
 
     <!-- BOTONES -->
     <div class="acciones">
-        <button class="btn-pagar">IR A PAGAR</button>
-        <button class="btn-regresar">REGRESAR</button>
+        <button class="btn-pagar" onclick="window.location.href='/pago'">IR A PAGAR</button>
+        <button class="btn-regresar" onclick="window.location.href='/'">REGRESAR</button>
     </div>
 
 </section>

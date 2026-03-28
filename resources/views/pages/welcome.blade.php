@@ -9,7 +9,7 @@
             <article class="hero-contenido">
                 <h1>Teenege Mutan Ninja Turtles!</h1>
                 <p>El mejor equipo de tortugas sale de los sumideros para dar el salto a Magic: The Gathering. Las tortugas ninja toman la forma de cartas de Magic y usan su conocida fuerza (¡y resistencia!) para proteger las calles de Shredder y los mutantes que desatan el caos.</p>
-                <button class="boton-placeholder">Compra YA</button>
+                <button class="boton-placeholder" onclick="window.location.href='/magic'">Compra YA</button>
             </article>
         </section>
 
@@ -17,19 +17,19 @@
             <div class="contenedor-grid">
                 <article class="item-novedad">
                     <div class="uplaceholder-img-cadrada">
-                        <img src="images/yugi_nov.webp" class="img-novedades" alt="Novedades">
+                        <img src="images/yugi_nov.webp" class="img-novedades" alt="Novedades" onclick="window.location.href='/yugioh'">
                     </div>
                     <p>Novedades</p>
                 </article>
                 <article class="item-novedad">
                     <div class="placeholder-img-cuadrada">
-                         <img src="images/mtg_nov.webp" class="img-novedades" alt="Novedades">
+                         <img src="images/mtg_nov.webp" class="img-novedades" alt="Novedades" onclick="window.location.href='/magic'">
                     </div>
                     <p>Novedades</p>
                 </article>
                 <article class="item-novedad">
                     <div class="placeholder-img-cuadrada">
-                         <img src="images/mitos_nov.webp" class="img-novedades" alt="Novedades">
+                         <img src="images/mitos_nov.webp" class="img-novedades" alt="Novedades" onclick="window.location.href='/mitos'">
                     </div>
                     <p>Novedades</p>
                 </article>

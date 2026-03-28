@@ -40,6 +40,11 @@ body {
   padding-top: 30px;
 }
 
+nav form{
+flex-direction: row;
+gap: 0;
+}
+
 /* Barra de ofertas */
 #top-bar {
   position: fixed;
@@ -436,7 +441,6 @@ body {
     background-color: black;
     color: white;
     padding: 50px 20px;
-    margin-top: 50px;
 }
 
 /* TOP */
@@ -466,9 +470,14 @@ body {
 }
 
 /* ICONOS */
+.social-icons a {
+    text-decoration: none;  
+}
+
 .social-icons span {
     margin-right: 10px;
     cursor: pointer;
+    color: white;
 }
 
 /* DERECHA */
@@ -510,6 +519,11 @@ body {
 
 .footer-col li {
     margin: 5px 0;
+}
+
+.footer-col a {
+    text-decoration: none;
+    color: inherit;
 }
 
 
@@ -998,4 +1012,234 @@ button {
     font-size: 12px;
     text-align: center;
     cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*SECCION CUENTA*/
+
+.cuenta-section{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cuenta-section .cuenta-container{
+    display:flex;
+    min-height:500px;
+}
+
+/* SIDEBAR */
+
+.cuenta-section .cuenta-sidebar{
+    width:260px;
+    background:#7f6bc4;
+    padding:30px 20px;
+    color:white;
+}
+
+.cuenta-section .cuenta-back{
+    margin-bottom:30px;
+    cursor:pointer;
+}
+
+.cuenta-section .cuenta-menu .cuenta-item{
+    background:white;
+    color:black;
+    padding:10px;
+    margin-bottom:10px;
+    border-radius:5px;
+}
+
+.cuenta-section .cuenta-menu .active{
+    background:#ddd6ff;
+}
+
+/* CONTENIDO */
+
+.cuenta-section .cuenta-content{
+    flex:1;
+    background:white;
+    padding:40px;
+}
+
+.cuenta-section .cuenta-title{
+    margin-bottom:30px;
+}
+
+/* FORM */
+
+.cuenta-section .cuenta-form{
+    max-width:400px;
+}
+
+.cuenta-section label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:5px;
+}
+
+.cuenta-section input{
+    width:100%;
+    border:none;
+    border-bottom:1px solid #aaa;
+    padding:8px;
+    outline:none;
+}
+
+.cuenta-section .cuenta-btn{
+    margin-top:30px;
+    background:#b7a6e6;
+    border:none;
+    padding:12px;
+    width:200px;
+    color:white;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* PAGINA ATENCION */
+
+.atencion-cliente{
+    display:flex;
+    justify-content:space-between;
+    padding:60px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* TEXTO */
+
+.info-soporte{
+    width:40%;
+}
+
+.info-soporte h1{
+    margin-bottom:20px;
+}
+
+/* CHAT */
+
+.chat-area{
+    width:400px;
+}
+
+/* CHAT BOX */
+
+.chat-box{
+    height:500px;
+    background:white;
+    border-radius:10px;
+    box-shadow:0 0 15px rgba(0,0,0,0.2);
+    display:flex;
+    flex-direction:column;
+    border: 0.5vw #1A1A1A;
+}
+
+/* HEADER */
+
+.chat-header{
+    background:#B694FF;
+    color:black;
+    padding:15px;
+    font-weight:bold;
+    font-family: 'XD';
+    font-size: 3vw;
+}
+
+/* MENSAJES */
+
+.chat-messages{
+    flex:1;
+    padding:15px;
+    overflow-y:auto;
+    background:#B694FF;
+}
+
+.mensaje{
+    max-width:70%;
+    padding:10px;
+    margin-bottom:10px;
+    border-radius:10px;
+}
+
+.soporte{
+    background:white;
+}
+
+.usuario{
+    background:#6644AE;
+    color:white;
+    margin-left:auto;
+}
+
+/* INPUT */
+
+.chat-input{
+    display:flex;
+    border-top:1px solid #ddd;
+}
+
+.chat-input input{
+    flex:1;
+    border:none;
+    padding:12px;
+    outline:none;
+}
+
+.chat-input button{
+    background:#6644AE;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    cursor:pointer;
+}
+
+/* CONTENEDOR GENERAL */
+
+.soporte-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #B89EF0;
+}
+
+/* BOTON REGRESAR */
+
+.btn-regresar{
+    align-self:flex-start;
+    margin-bottom:20px;
+    text-decoration:none;
+    color:white;
+    background:#6644AE;
+    padding:10px 20px;
+    border-radius:8px;
+}
+
+.texto-regresar{
+    color: black;
 }

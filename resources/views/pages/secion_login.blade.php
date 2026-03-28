@@ -24,14 +24,16 @@
             <label>CONTRASEÑA</label>
             <input type="password" placeholder="Lorem ipsum">
 
-            <button type="submit">Crear cuenta</button>
+            <button type="button" onclick="window.location.href='/'">
+                Iniciar Sesion
+            </button>
 
             <div class="terminos">
                 <input type="checkbox">
                 <span>MANTENER LA SESION ACTIVA</span>
             </div>
 
-            <p class="login-link">NO TIENES UNA CUENTA?</p>
+            <p class="login-link" onclick="window.location.href='/registro'" >NO TIENES UNA CUENTA?</p>
 
         </form>
 

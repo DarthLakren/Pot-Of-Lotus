@@ -24,14 +24,16 @@
             <label>CONTRASEÑA</label>
             <input type="password" placeholder="Lorem ipsum">
 
-            <button type="submit">Crear cuenta</button>
+            <button type="button" onclick="window.location.href='/'">
+                Crear cuenta
+            </button>
 
             <div class="terminos">
                 <input type="checkbox">
                 <span>TERMINOS Y CONDICIONES</span>
             </div>
 
-            <p class="login-link">YA TIENES CUENTA?</p>
+            <p class="login-link" onclick="window.location.href='/login'">YA TIENES CUENTA?</p>
 
         </form>
 

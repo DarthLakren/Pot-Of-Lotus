@@ -49,7 +49,9 @@
             <input type="text" placeholder="CODIGO POSTAL">
             <input type="text" placeholder="ESTADO">
 
-            <button type="submit">FINALIZAR COMPRA</button>
+            <button type="button" class="boton-placeholder" onclick="window.location.href='/'">
+                FINALIZAR COMPRA
+            </button>
         </form>
 
     </div>
