@@ -60,4 +60,8 @@ Route::get('/atencion', function () {
     return view('pages.atencion');
 })->name('atencion');
 
+Route::get('/faq', function () {
+    return view('pages.FAQ');
+})->name('faq');
+
 

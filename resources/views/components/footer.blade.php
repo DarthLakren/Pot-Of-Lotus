@@ -39,7 +39,9 @@
         <div class="footer-col">
         <strong>Ayuda</strong>
         <ul>
-            <li>FAQ</li>
+            <li>
+                <a href="/faq">FAQ</a>
+            </li>
             <li>
                 <a href="/atencion">Atencion a clientes</a>
             </li>
