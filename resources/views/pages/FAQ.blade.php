@@ -3,37 +3,48 @@
 @section('contenido')
 
 
-    <div class="max-w-2xl mx-auto my-12 bg-white shadow-md rounded-lg overflow-hidden">
-        <h2 class="text-2xl font-bold p-6 border-b">Preguntas Frecuentes</h2>
-
-        <div class="border-b">
-            <div id="pregunta1" class="p-4 bg-gray-50 hover:bg-gray-200 cursor-pointer font-medium transition-colors">
-                ¿Cuáles son los métodos de pago aceptados?
-            </div>
-            <div id="respuesta1" class="hidden p-4 text-gray-600 bg-white border-t">
-                Aceptamos tarjetas de crédito (Visa, Mastercard), PayPal y transferencias bancarias directas.
-            </div>
+<div class="container my-5">
+    <div class="card shadow">
+        <div class="card-header">
+            <h2 class="mb-0">Preguntas Frecuentes</h2>
         </div>
 
-        <div class="border-b">
-            <div id="pregunta2" class="p-4 bg-gray-50 hover:bg-gray-200 cursor-pointer font-medium transition-colors">
-                ¿Cuánto tiempo tarda en llegar mi pedido?
-            </div>
-            <div id="respuesta2" class="hidden p-4 text-gray-600 bg-white border-t">
-                El tiempo estimado de entrega es de 3 a 5 días hábiles para envíos nacionales.
-            </div>
-        </div>
+        <div class="card-body p-0">
 
-        <div class="border-b">
-            <div id="pregunta3" class="p-4 bg-gray-50 hover:bg-gray-200 cursor-pointer font-medium transition-colors">
-                ¿Tienen política de devoluciones?
+            <!-- PREGUNTA 1 -->
+            <div class="border-bottom">
+                <div id="pregunta1" class="p-3 bg-light hover cursor-pointer fw-semibold">
+                    ¿Cuáles son los métodos de pago aceptados?
+                </div>
+                <div id="respuesta1" class="d-none p-3 text-muted">
+                    Aceptamos tarjetas de crédito (Visa, Mastercard), PayPal y transferencias bancarias directas.
+                </div>
             </div>
-            <div id="respuesta3" class="hidden p-4 text-gray-600 bg-white border-t">
-                Sí, tienes hasta 30 días después de recibir tu producto para solicitar una devolución total.
+
+            <!-- PREGUNTA 2 -->
+            <div class="border-bottom">
+                <div id="pregunta2" class="p-3 bg-light cursor-pointer fw-semibold">
+                    ¿Cuánto tiempo tarda en llegar mi pedido?
+                </div>
+                <div id="respuesta2" class="d-none p-3 text-muted">
+                    El tiempo estimado de entrega es de 3 a 5 días hábiles para envíos nacionales.
+                </div>
             </div>
+
+            <!-- PREGUNTA 3 -->
+            <div>
+                <div id="pregunta3" class="p-3 bg-light cursor-pointer fw-semibold">
+                    ¿Tienen política de devoluciones?
+                </div>
+                <div id="respuesta3" class="d-none p-3 text-muted">
+                    Sí, tienes hasta 30 días después de recibir tu producto para solicitar una devolución total.
+                </div>
+            </div>
+
         </div>
     </div>
+</div>
 
-    <script src="/js/FAQ.js"></script>
+<script src="/js/FAQ.js"></script>
 
 @endsection

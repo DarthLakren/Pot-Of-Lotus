@@ -1,6 +1,12 @@
 <section class="catalogo">
 
-    <!-- FILTRO -->
+    <input 
+        type="text" 
+        id="buscador" 
+        placeholder="Buscar carta..." 
+        class="p-2 border w-full mb-4"
+    >
+
     <aside class="filtro">
         <h3>FILTRO</h3>
 
@@ -17,27 +23,28 @@
         </select>
     </aside>
 
-    <!-- CONTENIDO -->
+
     <div class="contenido">
 
         <h2>CARTAS</h2>
 
         <div class="grid-cartas">
 
-            <div class="card">
-                <img src="images/DB/MTG/Cards/Sorin_Markov.webp" onclick="window.location.href='/carta'">
+            <div class="card producto">
+                <img src="images/DB/MTG/Cards/Sorin_Markov.webp">
                 <p class="precio">$292</p>
                 <p class="nombre">Sorin Markov</p>
             </div>
 
-            <div class="card">
-                <img src="images/DB/MTG/Cards/Sorin_Markov.webp" onclick="window.location.href='/carta'">
+            <div class="card producto">
+                <img src="images/DB/MTG/Cards/Sorin_Markov.webp">
                 <p class="precio">$292</p>
-                <p class="nombre">Sorin Markov</p>
+                <p class="nombre">Lighting Bolt</p>
             </div>
 
         </div>
 
     </div>
+    <script src="/js/buscador.js"></script>
 
 </section>
