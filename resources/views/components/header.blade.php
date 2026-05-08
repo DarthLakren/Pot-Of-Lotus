@@ -38,6 +38,10 @@
         <li class="nav-item">
           <a class="nav-link" href="/mitos">Mitos y Leyendas</a>
         </li>
+
+         <li class="nav-item">
+          <a class="nav-link" href="/cartas">Colección</a>
+        </li>
       </ul>
       
       

@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CartaController;
+
 
 // Ruta para la página de Inicio (Novedades)
 Route::get('/', function () {
@@ -63,5 +65,12 @@ Route::get('/atencion', function () {
 Route::get('/faq', function () {
     return view('pages.FAQ');
 })->name('faq');
+
+Route::get('/cartas', [CartaController::class, 'index'])->name('cartas.index');
+
+
+
+
+
 
 
