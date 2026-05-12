@@ -1,103 +1,78 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-
-<div id="top-bar">
-  🔥 Ofertas disponibles 🔥
+<div id="top-bar" class="text-center py-1" style=" color: white; font-size: 0.9rem;">
+    🔥 Ofertas disponibles 🔥
 </div>
 
 <nav class="navbar navbar-expand-lg navbar-dark headerPoL">
-  <div class="container">
-<!-- LOGO -->
-   <a class="navbar-brand d-flex align-items-center" href="/">
-    <img src="{{ asset('images/logo.png') }}" 
-       alt="Logo" 
-       style="height: 50px; width: auto;" 
-       class="me-2">
-    <span class="fw-bold">PoT of Lotus</span>
-    </a>
-</a>
-    
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
+            <img src="{{ asset('images/logo.png') }}" alt="Logo" style="height: 50px; width: auto;" class="me-2">
+            <span class="fw-bold">PoT of Lotus</span>
+        </a>
 
-    
-    <div class="collapse navbar-collapse" id="navbarNav">
-      
-      <ul class="navbar-nav me-auto">
-              <!--BOTON MAGIC -->
-        <li class="nav-item">
-          <a class="nav-link" href="/magic">Magic: The Gathering</a>
-        </li>
-              <!--BOTON YUGI -->
-        <li class="nav-item">
-          <a class="nav-link" href="/yugioh">Yu-GI-Oh!</a>
-        </li>
-              <!--BOTON MITOS -->
-        <li class="nav-item">
-          <a class="nav-link" href="/mitos">Mitos y Leyendas</a>
-        </li>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-         <li class="nav-item">
-          <a class="nav-link" href="/cartas">Colección</a>
-        </li>
-      </ul>
-      
-      
-      <form class="d-flex mx-3 w-25" role="search" action="/buscar" method="GET">
-            <input 
-              class="form-control me-2" 
-              type="search" 
-              name="query"
-              placeholder="Buscar productos..." 
-            >
-            <button class="btn btn-outline-light" type="submit">
-              Buscar
-            </button>
-          </form>
-      
-      <ul class="navbar-nav align-items-center">
-        <li class="nav-item me-3">
-          <a class="nav-link position-relative" href="/carrito">
-            <img src="{{ asset('images/shop.png') }}" 
-              alt="Shop" 
-              style="height: 25px; width: auto;" 
-              class="me-2">
-          </a>
-        </li>
-
-        
-        @guest
-          <li class="nav-item">
-            <a class="nav-item me-3" href="/login">
-            <img src="{{ asset('images/Account.png') }}" 
-              alt="Account" 
-              style="height: 30px; width: auto;" 
-              class="me-2">
-            </a>
-          </li>
-        @endguest
-
-        @auth
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-              {{ auth()->user()->name }}
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end">
-              <li><a class="dropdown-item" href="/perfil">Perfil</a></li>
-              <li>
-                <form method="POST" action="/logout">
-                  @csrf
-                  <button class="dropdown-item">Cerrar sesión</button>
-                </form>
-              </li>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/magic') }}">Magic: The Gathering</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/yugioh') }}">Yu-Gi-Oh!</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/mitos') }}">Mitos y Leyendas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/cartas') }}">Colección</a>
+                </li>
             </ul>
-          </li>
-        @endauth
+            
+            <form class="d-flex mx-lg-3 my-2 my-lg-0 w-lg-25" role="search" action="{{ url('/buscar') }}" method="GET">
+                <input class="form-control me-2" type="search" name="query" placeholder="Buscar cartas..." aria-label="Search">
+                <button class="btn btn-outline-light" type="submit">Buscar</button>
+            </form>
+            
+            <ul class="navbar-nav align-items-center">
+                <li class="nav-item me-3">
+                    <a class="nav-link position-relative" href="{{ url('/carrito') }}">
+                        <img src="{{ asset('images/shop.png') }}" alt="Shop" style="height: 25px; width: auto;">
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.6rem;">
+                            0
+                        </span>
+                    </a>
+                </li>
 
-      </ul>
+                @guest
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">
+                            <img src="{{ asset('images/Account.png') }}" alt="Account" style="height: 30px; width: auto;">
+                        </a>
+                    </li>
+                @endguest
+
+                @auth
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="me-2">{{ auth()->user()->username }}</span> <img src="{{ asset('images/Account.png') }}" alt="Account" style="height: 25px; width: auto; filter: invert(1);">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" href="{{ url('/cuenta') }}"><i class="bi bi-bag me-2"></i>Mis Pedidos</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    <button type="submit" class="dropdown-item text-danger">
+                                        <i class="bi bi-box-arrow-right me-2"></i>Cerrar sesión
+                                    </button>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                @endauth
+            </ul>
+        </div>
     </div>
-  </div>
 </nav>

@@ -23,17 +23,18 @@ class CreateNewUser implements CreatesNewUsers
         public function create(array $input): User
         {
             Validator::make($input, [
-                'username' => ['required', 'string', 'max:255', 'unique:users'], // Tu campo del diagrama
+                'username' => ['required', 'string', 'max:255', 'unique:users'],
                 'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
                 'password' => $this->passwordRules(),
-                'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['accepted', 'required'] : '',
+                // Quitamos la referencia a Jetstream y lo dejamos como validación normal
+                'terms' => ['required', 'accepted'], 
             ])->validate();
 
             return User::create([
                 'username' => $input['username'],
                 'email' => $input['email'],
                 'password' => Hash::make($input['password']),
-                'role' => 'customer', // Asignamos el rol por defecto de tu DB
+                'role' => 'customer', // Tu rol por defecto
             ]);
         }
 }

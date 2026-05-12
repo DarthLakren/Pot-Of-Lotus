@@ -1102,6 +1102,7 @@ hr {
 .auth-container {
     display: flex;
     height: 100vh;
+    padding-top: 30px;
 }
 
 /* IZQUIERDA */
@@ -1147,6 +1148,22 @@ input {
     padding: 10px;
     border: 1px solid #999;
     border-radius: 5px;
+}
+
+/* Esto afecta a los textos que el usuario escribe dentro del input */
+.auth-right input {
+    font-family: 'Verdana', sans-serif; /* Cambia la fuente (ej. Montserrat, Roboto, etc.) */
+    font-size: 16px;                   /* Tamaño de la letra */
+    color: #333;                       /* Color del texto al escribir */
+    font-weight: 500;                  /* Grosor (400 es normal, 700 es negrita) */
+    letter-spacing: 1px;               /* Espaciado entre letras (estilo muy TCG) */
+    padding-left: 15px;                /* Espacio para que el texto no pegue al borde */
+}
+
+/* Esto afecta específicamente al texto que aparece de fondo (Placeholder) */
+.auth-right input::placeholder {
+    color: #999;                       /* Color del texto de sugerencia */
+    font-family: 'XD';
 }
 
 /* BOTÓN */
@@ -1196,6 +1213,7 @@ button {
 
 .cuenta-section{
     font-family: Arial, Helvetica, sans-serif;
+    padding-top: 30px;
 }
 
 .cuenta-section .cuenta-container{

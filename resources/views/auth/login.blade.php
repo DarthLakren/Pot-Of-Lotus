@@ -15,6 +15,12 @@
 
         <h1>INICIA SESIÓN</h1>
 
+        @if (session('status'))
+        <div class="alert alert-success border-0 shadow-sm mb-4" style="background-color: #d4edda; color: #155724; padding: 15px; border-radius: 8px;">
+            <i class="bi bi-check-circle-fill me-2"></i> {{ session('status') }}
+        </div>
+        @endif
+
         <form method="POST" action="{{ route('login') }}">
             @csrf
 

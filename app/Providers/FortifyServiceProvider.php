@@ -13,6 +13,7 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
 use Laravel\Fortify\Actions\RedirectIfTwoFactorAuthenticatable;
 use Laravel\Fortify\Fortify;
+use Laravel\Fortify\Contracts\RegisterResponse;
 
 class FortifyServiceProvider extends ServiceProvider
 {
@@ -21,7 +22,16 @@ class FortifyServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->instance(RegisterResponse::class, new class implements RegisterResponse {
+        public function toResponse($request)
+        {
+            // Cerramos la sesión que se inicia automáticamente al registrarse
+            auth()->logout(); 
+            
+            // Redirigimos al login con un mensaje de sesión
+            return redirect()->route('login')->with('status', '¡Cuenta creada con éxito! Ya puedes iniciar sesión.');
+        }
+    });
     }
 
     /**

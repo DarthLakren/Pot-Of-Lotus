@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CartaController;
+use App\Http\Controllers\ProfileController;
 
 
 // Ruta para la página de Inicio (Novedades)
@@ -59,6 +60,14 @@ Route::get('/faq', function () {
 })->name('faq');
 
 Route::get('/cartas', [CartaController::class, 'index'])->name('cartas.index');
+
+Route::middleware(['auth'])->group(function () {
+    
+    Route::get('/cuenta', [ProfileController::class, 'edit'])->name('profile.edit');
+
+    Route::put('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
+
+});
 
 
 
