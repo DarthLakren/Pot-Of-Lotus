@@ -46,14 +46,6 @@ Route::get('/buscar', function () {
     return view('pages.buscar');
 })->name('buscar');
 
-Route::get('/login', function () {
-    return view('pages.secion_login');
-})->name('login');
-
-Route::get('/registro', function () {
-    return view('pages.secion_create');
-})->name('registro');
-
 Route::get('/cuenta', function () {
     return view('pages.cuenta');
 })->name('cuenta');
