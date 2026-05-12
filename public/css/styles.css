@@ -531,11 +531,154 @@ gap: 0;
 
 
 /*CATALOGO*/
+/* Contenedor principal para separar lateral de contenido */
+.catalogo {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Barra lateral morada */
+.filtro {
+    width: 250px;
+    background-color: #6f42c1; /* Morado acorde a tu logo */
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    min-height: 80vh;
+}
+
+.filtro h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+}
+
+/* Botones de categorías */
+.btn-outline-light.rounded-pill {
+    border-width: 2px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+    color: white;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-outline-light.rounded-pill:hover {
+    background-color: white;
+    color: #6f42c1;
+}
+
+/* Estilo para los botones dentro del panel de filtros */
+.filtro .btn-outline-primary {
+    color: #ffffff;         /* Texto blanco */
+    border-color: #ffffff;  /* Borde blanco */
+    background-color: transparent;     /* Fondo transparente */
+    font-weight: 500;
+    border-radius: 10px;               /* Redondeado como en tu imagen */
+    margin-bottom: 10px;
+    transition: all 0.3s ease;         /* Animación suave */
+}
+
+/* Estilo cuando pasas el mouse (Hover) */
+.filtro .btn-outline-primary:hover {
+    background-color: #ffffff; /* Fondo se vuelve blanco */
+    color: #5a32a3;            /* Texto se vuelve morado (el color de tu fondo) */
+    border-color: #ffffff;
+}
+
+/* Estilo para cuando el botón es clickeado (Focus) */
+.filtro .btn-outline-primary:focus, 
+.filtro .btn-outline-primary:active {
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Color cuando el botón está activo/presionado */
+.btn-outline-primary:active, .btn-outline-primary:focus {
+    background-color: #5a32a3;
+    box-shadow: 0 0 0 0.25rem rgba(111, 66, 193, 0.5);
+}
+
+/* Estilo de las tarjetas (Cards) */
+.item-producto .card {
+    transition: transform 0.2s;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.item-producto .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+}
+
+/* El precio flotante ($20, $292, etc) */
+.badge-precio {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #28a745;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+/* Imágenes de las cartas */
+.card-img-top {
+    object-fit: contain;
+    height: 250px;
+    padding: 15px;
+    background-color: #f8f9fa;
+}
+
+/* Botón de tipo (Single, Sobre, etc) debajo del nombre */
+.btn-info {
+    background-color: #0dcaf0;
+    border: none;
+    font-weight: 500;
+}
+
+/* CLASE CRÍTICA PARA EL JAVASCRIPT */
+.ocultar {
+    display: none;
+}
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+    .catalogo {
+        flex-direction: column;
+    }
+    .filtro {
+        width: 100%;
+        min-height: auto;
+    }
+}
+
+
+
+
 /* CONTENEDOR GENERAL */
 .catalogo {
     display: flex;
     background: #7B6AA8;
     padding: 20px;
+}
+
+#buscador:focus {
+    box-shadow: none;
+    border-color: #dee2e6; /* Mantener el color del borde original */
+}
+
+.input-group:focus-within {
+    ring: 2px;
+    border-radius: 0.375 milímetros;
+    outline: 2px solid rgba(13, 110, 253, 0.25); /* El azul de Bootstrap */
 }
 
 /* SIDEBAR */
@@ -570,9 +713,9 @@ gap: 0;
 
 /* GRID DE CARTAS */
 .grid-cartas {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    
 }
 
 /* CARTA */
@@ -597,7 +740,26 @@ gap: 0;
     font-size: 0.9rem;
 }
 
+.contenedor-imagen-tcg {
+    width: 100%;
+    height: 300px; /* Esta es la altura total que quieres para la sección de la imagen. ¡Ajusta este número! */
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    overflow: hidden; /* Oculta lo que se salga */
+    background-color: #ffffff; /* Fondo blanco sutil para que el sobre destaque */
+}
 
+/* Imagen dentro del contenedor */
+.contenedor-imagen-tcg img {
+    max-width: 100%; /* No se sale de ancho */
+    max-height: 100%; /* No se sale de alto */
+    width: auto; /* Mantiene proporción */
+    height: auto; /* Mantiene proporción */
+    object-fit: contain; /* Garantiza que la imagen se vea completa */
+    object-position: bottom; /* Alinea las imágenes a la base del contenedor */
+    padding: 10px; /* Un poco de aire */
+}
 
 
 
@@ -1243,3 +1405,6 @@ button {
 .texto-regresar{
     color: black;
 }
+
+
+
