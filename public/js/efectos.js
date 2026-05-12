@@ -10,7 +10,7 @@ function resaltarProducto(evento) {
 
     div.classList.remove('border-secondary'); 
     
-    div.classList.add('shadow-lg', 'rounded','border','border-danger','border-5' );
+    div.classList.add('shadow-lg', 'rounded' );
 }
 
 function restaurarProducto(evento) {

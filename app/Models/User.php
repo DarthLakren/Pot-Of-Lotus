@@ -2,31 +2,26 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
 
     /**
-     * The attributes that are mass assignable.
-     *
-     * @var list<string>
+     * Los atributos que se pueden asignar masivamente.
      */
     protected $fillable = [
-        'name',
+        'username', // Cambiado de 'name' a 'username'
         'email',
         'password',
+        'role',     // Agregamos 'role' para que Laravel te permita guardarlo
     ];
 
     /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var list<string>
+     * Los atributos que deben ocultarse para la serialización (por seguridad).
      */
     protected $hidden = [
         'password',
@@ -34,9 +29,7 @@ class User extends Authenticatable
     ];
 
     /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
+     * Los casts para los atributos.
      */
     protected function casts(): array
     {
@@ -44,5 +37,13 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    /**
+     * Relación con las órdenes (Diagrama: USERS 1 --- M ORDERS)
+     */
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
     }
 }
