@@ -74,7 +74,7 @@
                             {{-- 2. OPCIÓN PARA TODOS LOS USUARIOS (Mantenemos Mis Pedidos) --}}
                             <li>
                                 <a class="dropdown-item" href="{{ url('/cuenta') }}">
-                                    <i class="bi bi-bag me-2"></i>Mis Pedidos
+                                    <i class="bi bi-bag me-2"></i>Mi Cuenta
                                 </a>
                             </li>
 

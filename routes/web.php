@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CartaController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\StockController;
 
 
 // Ruta para la página de Inicio (Novedades)
@@ -58,6 +59,14 @@ Route::get('/atencion', function () {
 Route::get('/faq', function () {
     return view('pages.FAQ');
 })->name('faq');
+
+Route::middleware(['auth', 'can:admin-only'])->group(function () {
+    // Ruta para VER el formulario
+    Route::get('/stock/subir', [StockController::class, 'create'])->name('stock.create');
+    
+    // Ruta para RECIBIR los datos (esta es la que te falta)
+    Route::post('/stock/guardar', [StockController::class, 'store'])->name('stock.store');
+});
 
 Route::get('/cartas', [CartaController::class, 'index'])->name('cartas.index');
 
