@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CartaController;
+use App\Http\Controllers\BuscarCartaController;
+
+
 
 
 // Ruta para la página de Inicio (Novedades)
@@ -67,6 +70,18 @@ Route::get('/faq', function () {
 })->name('faq');
 
 Route::get('/cartas', [CartaController::class, 'index'])->name('cartas.index');
+
+
+Route::get('/escaner', function () {
+    return view('cartas.escaner');
+})->name('escaner');
+
+Route::get('/api/buscar-carta-por-texto', [BuscarCartaController::class, 'buscarPorTexto']);
+
+
+
+
+
 
 
 

@@ -42,6 +42,12 @@
          <li class="nav-item">
           <a class="nav-link" href="/cartas">Colección</a>
         </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/escaner">📸 Escanear Carta</a>
+        </li>
+
+
       </ul>
       
       
