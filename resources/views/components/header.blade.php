@@ -56,11 +56,31 @@
                 @auth
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <span class="me-2">{{ auth()->user()->username }}</span> <img src="{{ asset('images/Account.png') }}" alt="Account" style="height: 25px; width: auto; filter: invert(1);">
+                            <span class="me-2">{{ auth()->user()->username }}</span> 
+                            <img src="{{ asset('images/Account.png') }}" alt="Account" style="height: 25px; width: auto; filter: invert(1);">
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="userDropdown">
-                            <li><a class="dropdown-item" href="{{ url('/cuenta') }}"><i class="bi bi-bag me-2"></i>Mis Pedidos</a></li>
+                            
+                            {{-- 1. OPCIÓN SOLO PARA DUEÑOS (ADMINS) --}}
+                            @if(auth()->user()->role === 'admin')
+                                <li>
+                                    <a class="dropdown-item fw-bold text-primary" href="{{ url('/stock/subir') }}">
+                                        <i class="bi bi-plus-square-fill me-2"></i>Subir Stock (Singles)
+                                    </a>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                            @endif
+
+                            {{-- 2. OPCIÓN PARA TODOS LOS USUARIOS (Mantenemos Mis Pedidos) --}}
+                            <li>
+                                <a class="dropdown-item" href="{{ url('/cuenta') }}">
+                                    <i class="bi bi-bag me-2"></i>Mis Pedidos
+                                </a>
+                            </li>
+
                             <li><hr class="dropdown-divider"></li>
+
+                            {{-- 3. CERRAR SESIÓN --}}
                             <li>
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
